@@ -1,4 +1,4 @@
 return {
-  "jeffkreeftmeijer/vim-numbertoggle",
-  name = "numbertoggle",
+	"jeffkreeftmeijer/vim-numbertoggle",
+	name = "numbertoggle",
 }

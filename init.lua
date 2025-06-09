@@ -12,7 +12,7 @@ vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 
-vim.opt.number = true         -- Corresponds to :set number
+vim.opt.number = true -- Corresponds to :set number
 vim.opt.relativenumber = true -- Corresponds to :set relativenumber
 
 -- Load lazy.nvim
