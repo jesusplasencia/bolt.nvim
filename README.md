@@ -9,14 +9,14 @@ A fast, highly optimized, readable, and feature-scalable Neovim configuration bu
 
 ## 🚀 Features
 
-*   **Facade:** A friendly interface using `[alpha](https://github.com/folke/tokyonight.nvim)`.
-*   **Colorscheme:** A clean and modern look colorscheme with the help of `[tokyonight](https://github.com/folke/tokyonight.nvim)`.
-*   **Packer Manager:** Leveraging `[lazy.nvim](https://github.com/folke/lazy.nvim)` for on-demand plugin installation.
-*   **Treesitter:** Powered by a left-side-panel `[nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)` to view a structured tree representation of your source code.
-*   **Fuzzy Finding:** Quickly find files, buffers, and commands with `[telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)` and minimal keymaps.
-*   **Buffer Manager:** Navigate between buffers with `[bufferline.nvim](https://github.com/akinsho/bufferline.nvim)`.
-*   **Syntax Highlighting:** Highlight when yanking (copying) text with `[kickstart-highlight-yank](https://github.com/nvim-lua/kickstart.nvim)`.
-*   **Enhanced Git Integration:** Seamless Git operations directly within Neovim with `[gitsigns]()` and `[lazygit]()`.
+*   **Facade:** A friendly interface using [alpha](https://github.com/folke/tokyonight.nvim).
+*   **Colorscheme:** A clean and modern look colorscheme with the help of [tokyonight](https://github.com/folke/tokyonight.nvim).
+*   **Packer Manager:** Leveraging [lazy.nvim](https://github.com/folke/lazy.nvim) for on-demand plugin installation.
+*   **Treesitter:** Powered by a left-side-panel [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) to view a structured tree representation of your source code.
+*   **Fuzzy Finding:** Quickly find files, buffers, and commands with [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) and minimal keymaps.
+*   **Buffer Manager:** Navigate between buffers with [bufferline.nvim](https://github.com/akinsho/bufferline.nvim).
+*   **Syntax Highlighting:** Highlight when yanking (copying) text with [kickstart-highlight-yank](https://github.com/nvim-lua/kickstart.nvim).
+*   **Enhanced Git Integration:** Seamless Git operations directly within Neovim with [gitsigns](https://github.com/lewis6991/gitsigns.nvim) and [lazygit](https://github.com/kdheepak/lazygit.nvim).
 *   **Custom Keybindings:** Ergonomic and efficient keymaps for common tasks (check `lua/config/keymaps.lua` to check all of them!).
 *   **Intelligent Auto-Completion:** Smart code suggestions for a wide range of languages.
 *   **Powerful LSP Integration:** Language Server Protocol support for enhanced development.
