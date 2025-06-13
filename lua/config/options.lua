@@ -50,6 +50,5 @@ vim.wo.wrap = false           -- Don't wrap lines
 vim.opt.mouse = 'a'           -- Allow mouse to resize windows
 vim.opt.showmode = false      -- Don't show mode, since it's already in the status line
 vim.opt.isfname:append("@-@") -- Allow hyphens in filenames
--- vim.opt.colorcolumn = "80"    -- Show a column at 80 characters for code style
-vim.opt.splitright = true     -- New vertical splits open to the right
-vim.opt.splitbelow = true     -- New horizontal splits open below
+-- vim.opt.splitright = true     -- New vertical splits open to the right
+-- vim.opt.splitbelow = true     -- New horizontal splits open below

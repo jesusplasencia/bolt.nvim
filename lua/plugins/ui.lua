@@ -109,11 +109,36 @@ return {
     },
     -- Keymaps for bufferline
     keys = {
-      { "<leader>bp", "<cmd>BufferLineTogglePin<CR>", desc = "Pin Buffer" },
-      { "<leader>bc", "<cmd>BufferLineCloseOthers<CR>", desc = "Close Other Buffers" },
-      { "<leader>bx", "<cmd>BufferLineClose<CR>", desc = "Close Buffer" },
-      { "<leader>bn", "<cmd>BufferLineCycleNext<CR>", desc = "Next Buffer" },
-      { "<leader>bp", "<cmd>BufferLineCyclePrev<CR>", desc = "Previous Buffer" },
+      -- Improved BufferLine Keymaps
+      -- Cycling buffers: <leader>bn (next), <leader>bp (previous) is a good standard
+      { "<leader>bn", "<cmd>BufferLineCycleNext<CR>", desc = "BufferLine: Next Buffer" },
+      { "<leader>bp", "<cmd>BufferLineCyclePrev<CR>", desc = "BufferLine: Previous Buffer" },
+
+      -- Jumping to specific buffers by number (often uses a global remap for <leader><number>)
+      -- To jump to specific buffers:
+      { "<leader>1", "<cmd>BufferLineGoToBuffer 1<CR>", desc = "BufferLine: Go to Buffer 1" },
+      { "<leader>2", "<cmd>BufferLineGoToBuffer 2<CR>", desc = "BufferLine: Go to Buffer 2" },
+      { "<leader>3", "<cmd>BufferLineGoToBuffer 3<CR>", desc = "BufferLine: Go to Buffer 3" },
+      { "<leader>4", "<cmd>BufferLineGoToBuffer 4<CR>", desc = "BufferLine: Go to Buffer 4" },
+      { "<leader>5", "<cmd>BufferLineGoToBuffer 5<CR>", desc = "BufferLine: Go to Buffer 5" },
+      { "<leader>6", "<cmd>BufferLineGoToBuffer 6<CR>", desc = "BufferLine: Go to Buffer 6" },
+      { "<leader>7", "<cmd>BufferLineGoToBuffer 7<CR>", desc = "BufferLine: Go to Buffer 7" },
+      { "<leader>8", "<cmd>BufferLineGoToBuffer 8<CR>", desc = "BufferLine: Go to Buffer 8" },
+      { "<leader>9", "<cmd>BufferLineGoToBuffer 9<CR>", desc = "BufferLine: Go to Buffer 9" },
+      { "<leader>0", "<cmd>BufferLineGoToBuffer -1<CR>", desc = "BufferLine: Go to Last Buffer" }, -- -1 usually means last
+
+      -- Closing buffers:
+      { "<leader>bc", "<cmd>BufferLineCloseOthers<CR>", desc = "BufferLine: Close Other Buffers" },
+      { "<leader>bd", "<cmd>bdelete<CR>", desc = "BufferLine: Close Current Buffer" }, -- Renamed to 'bd' for 'buffer delete'
+
+      -- Pinning/Unpinning
+      { "<leader>bt", "<cmd>BufferLineTogglePin<CR>", desc = "BufferLine: Toggle Pin" }, -- Changed from <leader>bp to <leader>bt for 'toggle pin'
+      -- You might also want to jump to the first/last visible buffer
+      { "<leader>bf", "<cmd>BufferLineGoToFirstBuffer<CR>", desc = "BufferLine: Go to First Buffer" },
+      { "<leader>bl", "<cmd>BufferLineGoToLastBuffer<CR>", desc = "BufferLine: Go to Last Buffer" },
+      -- Other useful BufferLine commands
+      { "<leader>bm", "<cmd>BufferLineToggleGroups<CR>", desc = "BufferLine: Toggle Groups" },
+      { "<leader>bs", "<cmd>BufferLineSortByDirectory<CR>", desc = "BufferLine: Sort by Directory" },
     },
   },
   -- File Explorer (neo-tree)
@@ -124,7 +149,7 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
-      "famiu/bufdelete.nvim",       -- Optional: Better buffer deletion when closing files from tree
+      -- "famiu/bufdelete.nvim",       -- Optional: Better buffer deletion when closing files from tree
     },
     lazy = false,
     opts = {

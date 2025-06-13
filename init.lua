@@ -23,7 +23,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Load lazy.nvim
+-- Importing configuration
 require("lua.config.options")
+require("lua.config.keymaps")
 require("config.lazy")
 
