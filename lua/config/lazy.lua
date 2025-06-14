@@ -1,3 +1,5 @@
+-- ~/.config/nvim/lua/config/lazy.lua
+
 -- Setup lazy.nvim
 local plugins = {
   spec = {

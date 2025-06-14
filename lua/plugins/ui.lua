@@ -149,17 +149,41 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
-      -- "famiu/bufdelete.nvim",       -- Optional: Better buffer deletion when closing files from tree
     },
     lazy = false,
-    opts = {
-      close_on_selection = false, -- Keep tree open after selecting a file
-      popup_border_style = "rounded",
-    },
+    opts = {},
     config = function()
       vim.keymap.set("n", "<C-n>", ":Neotree position=left toggle<CR>", { desc = "Toggle NvimTree" })
       vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to Left Window" })
       vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to Right Window" })
+    end,
+  },
+  -- Which-key
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy", -- Load late to avoid startup impact
+    init = function()
+      vim.o.timeout = true    -- Required for Which-Key
+      vim.o.timeoutlen = 300  -- Time in ms to wait for next key after leader (adjust as needed)
+    end,
+    opts = {
+      preset = "helix", -- or "default" or "none"
+    },
+    config = function()
+      local wk = require("which-key")
+
+      -- Register a default mode for visual keymaps
+      wk.add(
+        {
+          {"<leader>", desc = "[Leader]" },
+          {"<leader>f", desc = "[Find/Files]" },
+          {"<leader>b", desc = "[Buffers]" },
+          {"<leader>g", desc = "[Git]" },
+          {"<leader>l", desc = "[LSP]" },
+          {"<leader>t", desc = "[Toggle]" },
+          {"<leader>u", desc = "[Utility]" },
+        }
+      )
     end,
   },
 }

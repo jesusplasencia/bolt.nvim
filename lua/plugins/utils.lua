@@ -27,16 +27,6 @@ return {
     lazy = true,
   },
 
-  -- Commenting (mini.comment)
-  -- {
-  --   "echasnovski/mini.comment",
-  --   event = "BufReadPost",
-  --   opts = {},
-  --   keys = {
-  --     { "gc", mode = { "n", "v" }, "mini.comment.toggle", { desc = "Toggle comment line(s)" } },
-  --   },
-  -- },
-
   -- Auto Pairs (mini.pairs)
   {
     "echasnovski/mini.pairs",
